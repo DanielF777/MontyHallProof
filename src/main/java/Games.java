@@ -13,8 +13,6 @@ public class Games {
     private int wins = 0;
     private int losses = 0;
 
-    private boolean swap = true;
-
     public Games() {
         this.doors = asList(
                 new Door(
@@ -30,7 +28,7 @@ public class Games {
         rng = new Random();
     }
 
-    public HashMap<String, Integer> play(int amountOfGoes) {
+    public HashMap<String, Integer> play(int amountOfGoes, boolean swap) {
 
         while( amountOfGoes > 0) {
 
@@ -43,6 +41,7 @@ public class Games {
             int doorNumToExpose = exposeADoorWithAGoat(chosenDoor);
 
             System.out.println("Door number " + doorNumToExpose + " has been exposed, behind this door is a: " + currentGameDoors.get(doorNumToExpose).toString());
+
 
             if (swap) {
                 int swapDoorNumber = deduceExcludedValue(chosenDoor, doorNumToExpose);

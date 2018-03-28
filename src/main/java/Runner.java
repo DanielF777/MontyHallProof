@@ -7,14 +7,15 @@ public class Runner {
 
         Games game = new Games();
 
-        int amountOfGoes = 500;
+        int amountOfGoes = 500000;
+        boolean swap = true;
 
-        HashMap<String, Integer> play = game.play(50000);
+        HashMap<String, Integer> play = game.play(amountOfGoes, swap);
 
-        int wins = play.get("Wins");
-        int losses = play.get("Losses");
-        double winPercent = (double) (wins * 100) / amountOfGoes;
-        double losePercent = (double) (losses * 100) / amountOfGoes;
+        double wins = play.get("Wins");
+        double losses = play.get("Losses");
+        double winPercent = ((wins * 100) / amountOfGoes);
+        double losePercent = ((losses * 100) / amountOfGoes);
 
         System.out.println("Win Percentage: " + winPercent + "%");
         System.out.println("Lose Percentage: " + losePercent + "%");

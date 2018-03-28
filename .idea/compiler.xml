@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MontyHall" />
         <module name="MontyHallProof" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MontyHall" target="1.8" />
       <module name="MontyHallProof" target="1.8" />
     </bytecodeTargetLevel>
   </component>
